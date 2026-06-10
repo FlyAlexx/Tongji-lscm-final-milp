@@ -1,0 +1,13 @@
+{
+  "first_threshold_RMB_per_tCO2": 25,
+  "second_threshold_RMB_per_tCO2": null,
+  "all_jumps": [
+    {
+      "carbon_price": 25,
+      "reasons": [
+        "rail 0.74->0.89",
+        "road 0.26->0.11"
+      ]
+    }
+  ]
+}

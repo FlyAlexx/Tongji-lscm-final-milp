@@ -1,0 +1,23 @@
+LSCM Final MILP model log
+=========================
+
+Units: cost in RMB/year; emissions in tCO2/year; carbon price in RMB/tCO2; tonne-km totalled over all flows.
+
+Nodes: 3 suppliers, 2 production sites, 3 DCs, 5 demand regions.
+Total demand: 500000 t/a
+Demand by region: l1_East=102916, l2_South=99619, l3_West=88165, l4_North=91707, l5_Central=117591
+
+Mode availability: road=27, rail=7, nev=5 arcs.
+
+Pareto endpoints:
+  cost min     cost    387,406,535  em    19584.4  sites ('j1_Suzhou',)  dcs ('k1_Shanghai', 'k2_Chengdu', 'k3_Shenzhen')
+  emissions min cost    457,945,986  em    13970.6  sites ('j1_Suzhou', 'j2_Chongqing')  dcs ('k1_Shanghai', 'k2_Chengdu', 'k3_Shenzhen')
+
+Carbon-price sweep: 41 points over 0..1000 RMB/tCO2
+Structural jumps detected: 1
+  p=   25  rail 0.74->0.89; road 0.26->0.11
+
+Sanity checks (plausibility anchors, not validation):
+  - cainiao_nev_activation: pass=True  NEV should become meaningful on the emissions-minimum end of the Pareto frontier. If it never activates anywhere, the NEV-availability rule (NEV_MAX_DISTANCE_KM or trunk corridors) is too tight.
+  - cosco_technology_floor: pass=True  At the top of the carbon-price range, the marginal emission reduction should be small — beyond that, options outside the modelled mode space (methanol, hydrogen) take over.
+  - city_transport_order_of_magnitude: pass=True  City emissions file not readable; skipping.

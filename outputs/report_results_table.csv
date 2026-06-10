@@ -1,0 +1,5 @@
+scenario,carbon_price,cost_rmb,emissions_tco2,cost_increase_vs_baseline_pct,emission_reduction_vs_baseline_pct,open_sites,open_dcs,road_share,rail_share,nev_share
+Cost minimum,0.0,387406535.25,19584.369,0.0,0.0,j1_Suzhou,k1_Shanghai+k2_Chengdu+k3_Shenzhen,0.265,0.735,0.0
+First threshold,25,387473812.05,15658.066,0.02,20.05,j1_Suzhou,k1_Shanghai+k2_Chengdu+k3_Shenzhen,0.1096,0.8904,0.0
+Low-carbon network,0.0,389653690.68,14480.932,0.58,26.06,j1_Suzhou,k1_Shanghai+k2_Chengdu+k3_Shenzhen,0.0361,0.8904,0.0735
+Emissions minimum,0.0,457945986.21,13970.588,18.21,28.66,j1_Suzhou+j2_Chongqing,k1_Shanghai+k2_Chengdu+k3_Shenzhen,0.0253,0.8292,0.1454
